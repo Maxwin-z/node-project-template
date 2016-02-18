@@ -22,6 +22,7 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-empty": "^0.1.1",
+    "gulp-plumber": "^1.1.0",
     "gulp-watch": "^4.3.5",
     "yargs": "^4.1.0"
   },
