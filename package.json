@@ -1,0 +1,19 @@
+{
+  "name": "node-project-template",
+  "version": "1.0.0",
+  "description": "node project template with babel (es6), gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maxwin-z/node-project-template.git"
+  },
+  "author": "Maxwin-z",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maxwin-z/node-project-template/issues"
+  },
+  "homepage": "https://github.com/Maxwin-z/node-project-template#readme"
+}
