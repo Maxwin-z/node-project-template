@@ -6,6 +6,7 @@
   "scripts": {
     "start": "cross-env DEV=1 gulp",
     "build": "cross-env gulp",
+    "web": "cross-env DEV=1 gulp web.dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,16 +21,26 @@
   "homepage": "https://github.com/Maxwin-z/node-project-template#readme",
   "devDependencies": {
     "babel-eslint": "*",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-preset-es2015": "*",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "eslint": "^2.8.0",
+    "eslint-plugin-babel": "^3.2.0",
+    "eslint-plugin-html": "^1.4.0",
+    "eslint-plugin-react": "^5.0.1",
     "gulp": "*",
     "gulp-babel": "*",
-    "through2": "*",
     "gulp-plumber": "*",
-    "gulp-watch": "*"
+    "gulp-shell": "^0.5.2",
+    "gulp-watch": "*",
+    "react-hot-loader": "*",
+    "through2": "*",
+    "webpack": "*"
   },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
+  "dependencies": {
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1"
   }
 }

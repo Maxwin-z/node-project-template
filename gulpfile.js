@@ -4,6 +4,10 @@ const gulp = require('gulp');
 const through = require('through2');
 const babel = require('gulp-babel');
 const plumber = require('gulp-plumber');
+const shell = require('gulp-shell');
+
+const webpack = require('webpack');
+const webpackConfig = require('./webpack.config');
 let watch = require('gulp-watch');
 
 if (!process.env.DEV) {
@@ -21,9 +25,16 @@ gulp.task('web.html', () => {
     .pipe(gulp.dest('dist/web/'));
 })
 
-gulp.task('web.js', () => {
-  
+gulp.task('web.webpack', () => {
+  webpack(webpackConfig, ()=>{});
 })
+
+gulp.task('web.webpack-dev-server', shell.task([
+    'webpack-dev-server --content-base web/'
+]));
+
+gulp.task('web.dev', ['web.html', 'web.webpack-dev-server']);
+gulp.task('web.build', ['web.html', 'web.webpack']);
 
 gulp.task('babel', () => {
   const path = './src/**/*.js*(x)';
@@ -34,4 +45,4 @@ gulp.task('babel', () => {
     .pipe(gulp.dest("dist"));
 });
 
-gulp.task('default', ['babel', 'web.html']);
+gulp.task('default', ['babel', 'web']);
