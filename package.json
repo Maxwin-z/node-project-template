@@ -4,6 +4,8 @@
   "description": "node project template with babel (es6), gulp",
   "main": "index.js",
   "scripts": {
+    "start": "cross-env DEV=1 gulp",
+    "build": "cross-env gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,10 +23,9 @@
     "babel-preset-es2015": "*",
     "gulp": "*",
     "gulp-babel": "*",
-    "gulp-empty": "*",
+    "through2": "*",
     "gulp-plumber": "*",
-    "gulp-watch": "*",
-    "yargs": "*"
+    "gulp-watch": "*"
   },
   "babel": {
     "presets": [
