@@ -14,6 +14,17 @@ if (!process.env.DEV) {
   };
 }
 
+gulp.task('web.html', () => {
+  const path = './web/**/*.html';
+  return gulp.src(path)
+    .pipe(watch(path, {}))
+    .pipe(gulp.dest('dist/web/'));
+})
+
+gulp.task('web.js', () => {
+  
+})
+
 gulp.task('babel', () => {
   const path = './src/**/*.js*(x)';
   return gulp.src(path)
@@ -23,4 +34,4 @@ gulp.task('babel', () => {
     .pipe(gulp.dest("dist"));
 });
 
-gulp.task('default', ['babel']);
+gulp.task('default', ['babel', 'web.html']);
