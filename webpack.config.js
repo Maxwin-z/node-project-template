@@ -3,7 +3,7 @@ const path = require('path');
 
 const config = {
   entry: {
-    test: './web/js/test'
+    test: ['./web/js/test', 'webpack-hot-middleware/client', 'eventsource-polyfill']
   },
   output: {
     path: path.join(__dirname, 'dist/web/js'),

@@ -30,6 +30,7 @@
     "eslint-plugin-babel": "^3.2.0",
     "eslint-plugin-html": "^1.4.0",
     "eslint-plugin-react": "^5.0.1",
+    "eventsource-polyfill": "^0.9.6",
     "gulp": "*",
     "gulp-babel": "*",
     "gulp-plumber": "*",
@@ -37,7 +38,8 @@
     "gulp-watch": "*",
     "react-hot-loader": "*",
     "through2": "*",
-    "webpack": "*"
+    "webpack": "*",
+    "webpack-hot-middleware": "^2.10.0"
   },
   "dependencies": {
     "react": "^15.0.1",
