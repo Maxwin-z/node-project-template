@@ -17,14 +17,14 @@
   },
   "homepage": "https://github.com/Maxwin-z/node-project-template#readme",
   "devDependencies": {
-    "babel-eslint": "^5.0.0",
-    "babel-preset-es2015": "^6.5.0",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-empty": "^0.1.1",
-    "gulp-plumber": "^1.1.0",
-    "gulp-watch": "^4.3.5",
-    "yargs": "^4.1.0"
+    "babel-eslint": "*",
+    "babel-preset-es2015": "*",
+    "gulp": "*",
+    "gulp-babel": "*",
+    "gulp-empty": "*",
+    "gulp-plumber": "*",
+    "gulp-watch": "*",
+    "yargs": "*"
   },
   "babel": {
     "presets": [

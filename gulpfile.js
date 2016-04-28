@@ -2,9 +2,9 @@
 
 const gulp = require('gulp');
 const babel = require('gulp-babel');
-const watch = require('gulp-watch');
 const empty = require('gulp-empty');
-var plumber = require('gulp-plumber');
+const plumber = require('gulp-plumber');
+let watch = require('gulp-watch');
 const yargs = require('yargs');
 
 if (yargs.nowatch) {
