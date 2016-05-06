@@ -45,4 +45,4 @@ gulp.task('babel', () => {
     .pipe(gulp.dest("dist"));
 });
 
-gulp.task('default', ['babel', 'web']);
+gulp.task('default', ['babel', 'web.dev']);
