@@ -4,7 +4,7 @@ const path = require('path');
 const config = {
   entry: {
     test: ['./web/js/test', 'webpack-hot-middleware/client'],
-    'test-redux': ['./web/js/test', 'webpack-hot-middleware/client']
+    'test-redux': ['./web/js/test-redux']
   },
   output: {
     path: path.join(__dirname, 'dist/web/js'),
@@ -21,7 +21,7 @@ const config = {
   },
 
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
 

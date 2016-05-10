@@ -30,7 +30,8 @@ gulp.task('web.webpack', () => {
 })
 
 gulp.task('web.webpack-dev-server', shell.task([
-    'webpack-dev-server --content-base web/'
+    // 'supervisor -w dist/app.js -- dist/app.js'
+    'webpack-dev-server --inline --hot --content-base dist/web/'
 ]));
 
 gulp.task('web.dev', ['web.html', 'web.webpack-dev-server']);
