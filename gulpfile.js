@@ -33,6 +33,10 @@ gulp.task('web.webpack-dev-server', shell.task([
     'webpack-dev-server --content-base web/'
 ]));
 
+gulp.task('web.express', shell.task([
+  'supervisor -w dist/app.js -- dist/app.js '
+]))
+
 gulp.task('web.dev', ['web.html', 'web.webpack-dev-server']);
 gulp.task('web.build', ['web.html', 'web.webpack']);
 
@@ -45,4 +49,4 @@ gulp.task('babel', () => {
     .pipe(gulp.dest("dist"));
 });
 
-gulp.task('default', ['babel', 'web']);
+gulp.task('default', ['babel', 'web.express']);
