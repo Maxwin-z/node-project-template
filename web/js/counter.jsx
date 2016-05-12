@@ -7,6 +7,7 @@ export default class Counter extends React.Component {
   }
 
   onClick() {
+    console.log(this.props);
     this.setState({
       val: this.state.val + 1
     })
