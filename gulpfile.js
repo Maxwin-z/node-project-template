@@ -49,4 +49,4 @@ gulp.task('babel', () => {
     .pipe(gulp.dest("dist"));
 });
 
-gulp.task('default', ['babel', 'web.express']);
+gulp.task('default', ['babel', 'web.html', 'web.express']);

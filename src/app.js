@@ -1,5 +1,6 @@
 import express from 'express';
 import webpack from 'webpack';
+import path from 'path';
 
 const app = express();
 app.use(express.static('web'));
@@ -17,5 +18,9 @@ app.use(require('webpack-hot-middleware')(compiler));
 app.get('/', (req, res) => {
   res.end('hel');
 });
+
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'web', 'test-router.html'))
+})
 
 app.listen(3000);
